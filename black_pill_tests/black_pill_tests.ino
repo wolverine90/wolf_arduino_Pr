@@ -68,7 +68,7 @@ void setup()
         }
     }
   flagRecv = 0;
-  Serial.println("Version 0.7");
+  Serial.println("Version 1.0");
 
   attachInterrupt(digitalPinToInterrupt(CAN_INT_PIN), do_IRQ_2_can_receive, FALLING); // start interrupt
   CAN1.setMode(MODE_NORMAL);
