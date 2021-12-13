@@ -27,6 +27,9 @@ Tickers::~Tickers()
 
 int Tickers::not_block_ticker_call(int (*func)(), unsigned long currentMillis, unsigned int interval)
 {
+  if((default_delay != 1000)&&(interval == 1000))
+    interval = default_delay;
+  
   if (currentMillis - previousMillis >= interval) 
   { 
     (*func)();  
